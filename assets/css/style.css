@@ -1,0 +1,406 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F5F8FA;
+}
+p {
+  margin: 0;
+}
+.container-fluid {
+	padding: 0;
+	margin: 25px 100px 0 100px;
+	background-color: #E9EBEE;
+}
+.col-sm-3 {
+	padding: 0;
+	margin: 0;
+}
+.new-post-panel {
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  padding: 0px;
+  border-radius: 0px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px; 
+  background-color: #fff;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.new-post-panel-header {
+  padding: 5px;
+  background-color: #F6F7F9;
+}
+.new-post-panel-footer {
+  padding: 5px;
+  background-color: #F6F7F9;
+}
+.new-post-picture {
+  width: 35px;
+  border:1px solid #e0e0e0;
+  border-radius: 2px;
+}
+.new-post-username {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+.user-picture {
+	width: 35px;
+	border-radius: 2px;
+	border:1px solid #eee;
+	margin-right: 5px;
+  float: left;
+}
+.textcount {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  padding: 0;
+}
+.user-name {
+	font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  line-height: 35px;
+}
+.settings-icon {
+  float: right;
+  color: #b0b0b0;
+}
+.settings-icon:hover {
+  color: #a0a0a0;
+}
+.glyphicon.glyphicon-cog {
+  font-size: 24px;
+  line-height: 35px;
+  margin-right: 5px;
+}
+.post-textarea {
+	width: 100%;
+	resize: none;
+	margin-bottom: -5px;
+	height: 85px;
+	border:none;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+	border-radius: 0px;
+	padding: 5px;
+	color: #666;
+	font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+.post-textarea:focus, .post-textarea:active {
+	outline: none;
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+.left-nav {
+  margin-left: 35px;
+}
+ul.topnav li a.active {
+  border-bottom: 4px solid #87DA6A;
+}
+ul.topnav li {
+	float: left;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #666;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.1s;
+  border-bottom: 4px solid #fff;
+}
+
+ul.topnav li a:hover {
+	background-color: #fff;
+  color: #87DA6A;
+  border-bottom: 4px solid #87DA6A;
+}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.user-stats {
+  width: 100%;
+}
+.user-stats th, .user-stats td {
+  text-align: center;
+}
+.user-stats th {
+  font-size: 18px;
+}
+.user-stats td {
+  font-size: 18px;
+}
+.user-stats th:hover {
+  transition: 0.2s;
+  cursor: pointer;
+}
+.settings-form {
+  margin-bottom: 5px;
+  margin-right: 50px;
+}
+.settings-label {
+  margin-left: 50px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+.none {
+  display: none;
+}
+.on {
+  display: block;
+}
+li a.center-logo {
+  padding-left: 50%;
+}
+.comment-panel {
+  padding: 5px;
+}
+.notification-panel {
+  padding: 5px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.notification-panel:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.noti-desc {
+  font-family: 'Rubik', sans-serif;
+}
+.noti-header {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.user-message-box {
+  padding: 5px;
+}
+.user-message-box:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.message-box-picture {
+  width: 50px;
+  border:1px solid #c0c0c0;
+  border-radius: 32px;
+  margin-right: 5px;
+}
+.message-box-username {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+}
+.mess-box {
+  color: #444;
+}
+.mess-box:hover {
+  text-decoration: none;
+  color: #444;
+}
+#messages {
+  height: 75vh;
+  padding: 3px;
+}
+#send-message {
+  height: 5vh;
+}
+.message {
+  border:none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 2px;
+}
+.message:focus {
+  outline: none;
+}
+.send-msg {
+  display: none;
+}
+.msg-box {
+  width: 100%;
+  margin-bottom: 3px;
+}
+.msg-self {
+  padding: 5px 15px;
+  border-radius: 32px;
+  background-color: #87DA6A;
+  margin-left: 25vw;
+  margin-right: 5px;
+  color: white;
+  width: auto;
+}
+.msg-other {
+  padding: 5px 15px;
+  border-radius: 32px;
+  margin-right: 30vw;
+  margin-left: 3px;
+  width: auto;
+  background-color: #F1F0F0;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 0px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.settings-btn {
+  
+}
+ @media only screen and (max-width : 540px) 
+            {
+                .chat-sidebar
+                {
+                    display: none !important;
+                }
+                
+                .chat-popup
+                {
+                    display: none !important;
+                }
+            }
+            
+            body
+            {
+                background-color: #e9eaed;
+            }
+            
+            .chat-sidebar
+            {
+                width: 200px;
+                position: fixed;
+                height: 100%;
+                right: 0px;
+                top: 0px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: 1px solid rgba(29, 49, 91, .3);
+            }
+            
+            .sidebar-name 
+            {
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-bottom: 4px;
+                font-size: 12px;
+            }
+            
+            .sidebar-name span
+            {
+                padding-left: 5px;
+            }
+            
+            .sidebar-name a
+            {
+                display: block;
+                height: 100%;
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .sidebar-name:hover
+            {
+                background-color:#e1e2e5;
+            }
+            
+            .sidebar-name img
+            {
+                width: 32px;
+                height: 32px;
+                vertical-align:middle;
+            }
+            
+            .popup-box
+            {
+                display: none;
+                position: fixed;
+                bottom: 0px;
+                right: 220px;
+                height: 335px;
+                background-color: rgb(237, 239, 244);
+                width: 300px;
+                border: 1px solid rgba(29, 49, 91, .3);
+            }
+            
+            .popup-box .popup-head
+            {
+                background-color: #87DA6A;
+                padding: 5px;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                clear: both;
+            }
+            
+            .popup-box .popup-head .popup-head-left
+            {
+                float: left;
+            }
+            
+            .popup-box .popup-head .popup-head-right
+            {
+                float: right;
+                opacity: 0.5;
+            }
+            
+            .popup-box .popup-head .popup-head-right a
+            {
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .popup-box .popup-messages
+            {
+                height: 100%;
+                overflow-y: scroll;
+            }
+
+.row, .col {
+  padding: 0;
+}
+.nav-wrapper {
+  padding: 0 112px 0 112px;
+}
+.user-stats {
+  padding: 5px;
+}

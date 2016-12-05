@@ -1,0 +1,8 @@
+RewriteEngine ON
+
+RewriteRule ^register$ register.php [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^settings$ pages/settings.php [L]
+
+RewriteRule ^user/([A-Za-z0-9_]+)$ pages/profile.php?u=$1
+RewriteRule ^messages/([A-Za-z0-9_]+)$ pages/messages.php?u=$1

@@ -131,6 +131,7 @@ $('#form-send-message').submit(function() {
     return false;
 });
 
+// SUBMIT NEW POST TO SCRIPT THAT EVENTUALLY INSERTS POST TO DATABASE
 $('#new-post-form').submit(function() {
     var textarea = $('#textarea').val();
 
@@ -144,11 +145,14 @@ $('#new-post-form').submit(function() {
         }
     });
     $.ajax({
-        url: 'scripts/process-posts.php',
+        url: 'scripts/get-newest-post.php',
         success: function(data) {
-            $('#posts').html(data);
+            var new_data = $(data).hide();
+            $('#posts').prepend(new_data);
+            new_data.slideDown();
+            Materialize.toast('Posted!', 3000);
         }
-    });
+    })
     $("#textarea").val("");
     return false;
 });

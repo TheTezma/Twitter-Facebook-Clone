@@ -1,4 +1,5 @@
 <?php
+// TEZMA
 session_start();
 include_once ('scripts/dbconnect.php');
 

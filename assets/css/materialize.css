@@ -3643,11 +3643,17 @@ input[type=range] + .thumb {
 }
 
 @media only screen and (min-width: 601px) {
+  .nav-wrapper {
+    padding: 0 38px 0 38px;
+  }
+  .container-fluid {
+    margin: 25px 25px 0 25px;
+  }
   .trending-1 {
     display: block;
   }
   .trending-2 {
-    display: none;
+    display: block;
   }
   .row .col.m1 {
     width: 8.3333333333%;
@@ -3832,6 +3838,12 @@ input[type=range] + .thumb {
 }
 
 @media only screen and (min-width: 993px) {
+  .nav-wrapper {
+    padding: 0 112px 0 112px;
+  }
+  .container-fluid {
+    margin: 25px 100px 0 100px;
+  }
   .trending-1 {
     display: none;
   }

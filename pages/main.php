@@ -53,7 +53,7 @@ GetUserInfo($UserSession);
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col s12 m6 l3">
+		<div class="col s12 m4 l3">
 			<div class="dashboard-panel">
 				<div class="dashboard-panel-body">
 					<img class="user-picture" src="uploads/images/<?= $UserPicture ?>">
@@ -73,24 +73,19 @@ GetUserInfo($UserSession);
 					</a>
 				</div>
 			</div>
-		</div>
-		<div class="col s12 m6 l3 trending-1">
-			<div class="dashboard-panel">
+			<div class="dashboard-panel trending-1">
 				<div class="dashboard-panel-body">
 				trending
 				</div>
 			</div>
 		</div>
-		<div class="col s12 m12 l6">
+		<div class="col s12 m8 l6">
 			<div class="new-post-panel">
 				<div class="form-box">
 					<form action="#" method="post" id="new-post-form">
-						<div class="new-post-panel-header">
-							<span><img class="new-post-picture" src="uploads/images/<?= $UserPicture ?>"></span>
-							<a onclick="ClearText()" type="button" class="waves-effect btn-flat">Clear Text</a>
-						</div>
+						<span><img class="new-post-picture" src="uploads/images/<?= $UserPicture ?>"></span>
 						<textarea class="post-textarea" id="textarea" name="textarea" maxlength="240" placeholder="Write your post here"></textarea>
-						<div class="new-post-panel-footer">
+						<div class="new-post-panel-footer" id="new-post-panel-footer" style="display: none;">
 							<button class="waves-effect light-blue darken-2 btn">
 								<input type="submit" id="post" name="submit-post" value="Post">
 							</button>
@@ -99,9 +94,10 @@ GetUserInfo($UserSession);
 					</form>
 				</div>
 			</div>
+			<div id="new-post"></div>
 			<div id="posts"></div>
 		</div>
-		<div class="col s12 m6 l3 trending-2">
+		<div class="col s12 m4 l3 trending-2">
 			<div class="dashboard-panel">
 				<div class="dashboard-panel-body">
 				trending

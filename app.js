@@ -180,11 +180,3 @@ function likePost(postid, userid) {
         }
     });
 };
-
-function PostCheck() {
-    if($("#textarea").val("")) {
-        Materialize.toast('Please write something to post', 4000);
-    } else {
-        Materialize.toast('Posted!', 4000); 
-    }
-}

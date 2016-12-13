@@ -180,3 +180,17 @@ function likePost(postid, userid) {
         }
     });
 };
+
+$(document).ready(function() {
+    GetTrending();
+});
+
+// TRENDING
+function GetTrending() {
+    $.ajax({
+        url: 'scripts/trending.php',
+        success: function(data) {
+            $('#trending').html(data);
+        }
+    })
+}

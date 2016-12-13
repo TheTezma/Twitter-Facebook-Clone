@@ -102,10 +102,24 @@ function SendMessage($sender, $message, $reciever, $timestamp) {
 	}
 }
 
-function SubmitPost($UserID, $content, $timestamp, $UserPicture, $UserName) {
+function SubmitPost($UserID, $content, $timestamp, $UserPicture, $UserName, $Hashtag) {
 	include ('dbconnect.php');
 	if(!empty($content)) {
 		$query = "INSERT INTO posts (user_id, username, picture, content, timestamp) VALUES ('$UserID', '$UserName', '$UserPicture', '$content', '$timestamp')";
+		if(empty($Hashtag)) {
+
+		} else {
+			$query2 = "SELECT * FROM trending WHERE hashtag = '$Hashtag'";
+			if($run2 = $Connect -> query($query2)) {
+				$hashquery = $run2 -> fetch_array();
+
+				$query4 = "UPDATE trending SET hits = hits + 1 WHERE hashtag = '$Hashtag'";
+				$run4 = $Connect -> query($query4);
+			} else {
+				$query3 = "INSERT INTO trending (hashtag, hits) VALUES ('$Hashtag', '1')";
+				$run3 = $Connect -> query($query3);
+			}
+		}
 
 		if($run = $Connect -> query($query)) {
 			return true;

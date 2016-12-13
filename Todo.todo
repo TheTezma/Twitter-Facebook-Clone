@@ -1,13 +1,25 @@
 Posts:
-  ☐ Disable click to popup post
-  ☐ Fix like post system
-  ☐ Make image uploading work
+  ✔ Disable click to popup post @done (16-12-13 23:02)
+  ☐ Fix like post system (maybe scrap likes altogether, comments are more connecting)
+  ☐ Make image posting work 
+  ☐ Notify user when a new post is created by someone they follow 
 
 Messaging:
-  ☐ Finish private messaging system
-  ☐ Implement the chat popup at the bottom of the view-window
+  ☐ Finish private messaging system 
+  ☐ Implement the chat popup at the bottom of the view-window (MUST HAVE) 
   
 Notifications:
-  ☐ Clean up the notification panel and include it in the navbar
+  ☐ Figure out a better way of approaching notifications (maybe a dedicated page, or a dropdown (like facebook))
 
+Trending:
+  ☐ FIGURE IT OUT (maybe scrap trending altogether)
 
+Profile:
+  ☐ Clean it up, nobody likes clutter 
+  ☐ Make viewing followers, following available 
+
+General:
+  ☐ Convert rest of site to material css framwork
+  ☐ Clean up UI
+  ☐ Make EVERYTHING auto update
+  ☐ Push EVERY change

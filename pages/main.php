@@ -41,12 +41,20 @@ GetUserInfo($UserSession);
       <ul class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <!-- Dropdown Trigger -->
-      	<li><a class="dropdown-button" data-beloworigin="true" data-activates="dropdown"><?= $Username ?><i class="material-icons right">arrow_drop_down</i></a></li>
+      	<li>
+      		<a class="dropdown-button" data-beloworigin="true" data-activates="dropdown">
+      			<?= $Username ?><i class="material-icons right">arrow_drop_down</i>
+      		</a>
+      	</li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>
         <!-- Dropdown Trigger -->
-      	<li><a class="dropdown-button" data-beloworigin="true" data-activates="dropdown1"><?= $Username ?><i class="material-icons right">arrow_drop_down</i></a></li>
+      	<li>
+	      	<a class="dropdown-button" data-beloworigin="true" data-activates="dropdown1">
+	      		<?= $Username ?><i class="material-icons right">arrow_drop_down</i>
+	      	</a>
+      	</li>
       </ul>
     </div>
   </nav>
@@ -63,13 +71,13 @@ GetUserInfo($UserSession);
 			<div class="dashboard-panel">
 				<div class="user-stats">
 					<a href="user/<?= $Username ?>" class="collection-item">
-						<span class="badge"><?= $UserPosts ?></span>Posts 
+						<span class="badge"><?= $UserPosts ?></span>Posts
 					</a><br>
 					<a href="user/<?= $Username ?>/followers" class="collection-item">
-						<span class="badge"><?= $UserFollowers ?></span>Followers 
+						<span class="badge"><?= $UserFollowers ?></span>Followers
 					</a><br>
 					<a href="user/<?= $Username ?>/following" class="collection-item">
-						<span class="badge"><?= $UserFollowing ?></span>Following 
+						<span class="badge"><?= $UserFollowing ?></span>Following
 					</a>
 				</div>
 			</div>
@@ -83,9 +91,10 @@ GetUserInfo($UserSession);
 			<div class="new-post-panel">
 				<div class="form-box">
 					<form action="#" method="post" id="new-post-form">
-						<span><img class="new-post-picture" src="uploads/images/<?= $UserPicture ?>"></span>
-						<textarea class="post-textarea" id="textarea" name="textarea" maxlength="240" placeholder="Write your post here"></textarea>
-						<div class="new-post-panel-footer" id="new-post-panel-footer" style="display: none;">
+						<div class="form-box-body">
+							<textarea class="post-textarea" id="textarea" name="textarea" maxlength="240" placeholder="Write your post here"></textarea>
+						</div>
+						<div class="new-post-panel-footer" id="new-post-panel-footer">
 							<button class="waves-effect light-blue darken-2 btn">
 								<input type="submit" id="post" name="submit-post" value="Post">
 							</button>
@@ -100,7 +109,7 @@ GetUserInfo($UserSession);
 		<div class="col s12 m4 l3 trending-2">
 			<div class="dashboard-panel">
 				<div class="dashboard-panel-body">
-				trending
+					<div id="trending"></div>
 				</div>
 			</div>
 		</div>

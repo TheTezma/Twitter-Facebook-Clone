@@ -9,8 +9,9 @@ $timestamp = time();
 
 if(isset($_GET['textarea'])&&!empty($_GET['textarea'])) {
 	$content = $_GET['textarea'];
+	$Hashtag = preg_replace('/#(\\w+)/');
 
-	if(SubmitPost($UserID, $content, $timestamp, $UserPicture, $UserName)) {
+	if(SubmitPost($UserID, $content, $timestamp, $UserPicture, $UserName, $Hashtag)) {
 
 	} else {
 		echo 'The message could not be sent.';

@@ -58,8 +58,9 @@
 }
 .post-user-picture {
   width: 40px;
+  height: 40px;
   border:1px solid #eee;
-  border-radius: 2px;
+  border-radius: 3px;
   float: left;
   margin-right: 5px;
 }

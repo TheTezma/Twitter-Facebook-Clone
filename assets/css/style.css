@@ -17,6 +17,9 @@ p {
 	padding: 0;
 	margin: 0;
 }
+.form-box-body {
+  padding: 5px;
+}
 .new-post-panel {
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
   padding: 0px;
@@ -34,9 +37,11 @@ p {
 .new-post-panel-footer {
   padding: 5px;
   background-color: #F6F7F9;
+  border-top:1px solid #d0d0d0;
 }
 .new-post-picture {
   width: 35px;
+  height: 35px;
   border:1px solid #e0e0e0;
   border-radius: 2px;
   margin-right: 5px;
@@ -46,9 +51,18 @@ p {
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
 }
+.user-img {
+  background: 50% 50%;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  display: inline-block;
+}
 .user-picture {
-	width: 35px;
-	border-radius: 2px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+	border-radius: 3px;
 	border:1px solid #eee;
 	margin-right: 5px;
   float: left;
@@ -76,13 +90,11 @@ p {
   margin-right: 5px;
 }
 .post-textarea {
-  width: 90%;
+  width: 100%;
 	resize: none;
 	margin-bottom: -5px;
-	height: 36px;
+	height: 85px;
 	border:none;
-  border-top: 1px solid #d0d0d0;
-  border-bottom: 1px solid #d0d0d0;
 	border-radius: 0px;
 	padding: 5px;
 	color: #666;
@@ -91,7 +103,6 @@ p {
 }
 .post-textarea:focus, .post-textarea:active {
 	outline: none;
-  height: 85px;
 }
 ul.topnav {
   list-style-type: none;

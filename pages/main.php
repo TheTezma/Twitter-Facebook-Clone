@@ -95,7 +95,7 @@ GetUserInfo($UserSession);
 							<textarea class="post-textarea" id="textarea" name="textarea" maxlength="240" placeholder="Write your post here"></textarea>
 						</div>
 						<div class="new-post-panel-footer" id="new-post-panel-footer">
-							<button class="waves-effect light-blue darken-2 btn">
+							<button class="waves-effect light-blue darken-2 btn" id="post-btn">
 								<input type="submit" id="post" name="submit-post" value="Post">
 							</button>
 							<span class="textcount" id="textarea-counter">240 Characters Remaining</span>
@@ -139,7 +139,7 @@ GetUserInfo($UserSession);
 <script type="text/javascript" src="assets/js/materialize.js"></script>
 <script type="text/javascript" src="assets/js/post-stream.js"></script>
 <script type="text/javascript">
-	$(document).ready(function() {
+$(document).ready(function() {
     var text_max = 240;
     $('#textarea-counter').html(text_max + ' Characters Remaining');
 
@@ -149,6 +149,21 @@ GetUserInfo($UserSession);
 
         $('#textarea-counter').html(text_remaining + ' Characters Remaining');
     });
+
+	document.getElementById('post-btn').disabled = true;
+
+    $('#textarea').keyup(function() {
+		var text_length = $('#textarea').val().length;
+
+    	if(text_length >= 1) {
+		    document.getElementById('post-btn').disabled = false;
+		};
+
+		if(text_length === 0) {
+			document.getElementById('post-btn').disabled = true;
+		}
+    });
+
 });
 
 $(document).ready(function(){

@@ -22,7 +22,12 @@ GetUserInfo($UserSession);
 
 <nav>
     <div class="nav-wrapper light-blue darken-2">
-      <a href="" class="brand-logo">Not-Facebook</a>
+      <a href="" class="brand-logo center">Not-Facebook</a>
+			<ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li class="active"><a href=".">Home</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <!-- Dropdown Structure -->
 	  <ul id="dropdown" class="dropdown-content">
@@ -83,7 +88,7 @@ GetUserInfo($UserSession);
 			</div>
 			<div class="dashboard-panel trending-1">
 				<div class="dashboard-panel-body">
-				trending
+					<div id="trending"></div>
 				</div>
 			</div>
 		</div>

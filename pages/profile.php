@@ -26,7 +26,7 @@ $ProfileUserFollowing = $ProfileInfo['user_following'];
 <link rel="stylesheet" type="text/css" href="../assets/css/post-css.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/framework.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/profile.css">
-<script type="text/javascript" href="../assets/js/site.js"></script>
+<script type="text/javascript" href="app.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato|Rubik" rel="stylesheet">
 <script>
 	$( function() {

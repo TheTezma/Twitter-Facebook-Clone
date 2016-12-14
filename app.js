@@ -1,3 +1,30 @@
+$(document).ready(function() {
+    var text_max = 240;
+    $('#textarea-counter').html(text_max + ' Characters Remaining');
+
+    $('#textarea').keyup(function() {
+        var text_length = $('#textarea').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#textarea-counter').html(text_remaining + ' Characters Remaining');
+    });
+
+	document.getElementById('post-btn').disabled = true;
+
+    $('#textarea').keyup(function() {
+		var text_length = $('#textarea').val().length;
+
+    	if(text_length >= 1) {
+		    document.getElementById('post-btn').disabled = false;
+		};
+
+		if(text_length === 0) {
+			document.getElementById('post-btn').disabled = true;
+		}
+    });
+
+});
+
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -141,7 +168,8 @@ $('#new-post-form').submit(function() {
             textarea: textarea
         },
         success: function(data) {
-
+          document.getElementById('post-btn').disabled = true;
+          $('#textarea-counter').html(text_remaining + ' Characters Remaining');
         }
     });
     $.ajax({
@@ -170,7 +198,7 @@ function likePost(postid, userid) {
         url: 'scripts/like.php',
         data: data,
         success: function(likes) {
-            
+
         }
     });
     $.ajax({

@@ -26,7 +26,6 @@ foreach($messages as $message) {
 	?>
 	<div class="msg-box">
 		<div class="<?= $msgboxclass ?>">
-			<span><?= getTime($message['timestamp']) ?> - </span>
 			<span><?= $MsgData['user_name'] ?>: </span>
 			<span><?= $message['message'] ?></span>
 		</div>

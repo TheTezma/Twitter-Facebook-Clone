@@ -26,15 +26,34 @@ GetUserInfo($UserSession);
 			<ul id="nav-mobile" class="left hide-on-med-and-down">
         <li class="active"><a href=".">Home</a></li>
         <li><a href="#">Notifications</a></li>
-        <li><a href="#">Messages</a></li>
+        <li><a href="#Message-Modal">Messages</a></li>
       </ul>
+      <!-- Message Modal Structure -->
+	  <div id="Message-Modal" class="modal">
+	    <div class="modal-content">
+	    	<div class="row">
+			    <div class="col s4 m4 l4">
+			    	<?php GetMessageUsers($UserID) ?>
+			    </div>
+			    <div class="col s8 m8 l8">
+			    	<div id="conversation"></div>
+			    	<form action="#" method="POST" id="form-send-message">
+						<input type="text" name="message" id="message" class="message" placeholder="Type a message.." autocomplete="off">
+						<input type="text" name="sender" id="sender" value="<?= $UserID ?>" hidden>
+						<input type="text" name="reciever" id="reciever" value="<?= $UserID2 ?>" hidden>
+						<input type="submit" name="send" value="Send Message" id="send" class="send-msg">
+					</form>
+			    </div>
+			</div>
+	    </div>
+	  </div>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <!-- Dropdown Structure -->
 	  <ul id="dropdown" class="dropdown-content">
 		  <li><a href="#!">one</a></li>
 		  <li><a href="#!">two</a></li>
 		  <li class="divider"></li>
-		  <li><a href="#!">three</a></li>
+		  <li><a href="logout.php?logout">Logout</a></li>
 	  </ul>
 	  <!-- Dropdown Structure -->
 	  <ul id="dropdown1" class="dropdown-content">
@@ -174,5 +193,6 @@ $(document).ready(function() {
 $(document).ready(function(){
     $(".button-collapse").sideNav();
     $(".dropdown-button").dropdown();
+    $('.modal').modal();
 })
 </script>

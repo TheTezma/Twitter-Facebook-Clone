@@ -211,6 +211,7 @@ function likePost(postid, userid) {
 
 $(document).ready(function() {
     GetTrending();
+    GetMessages();
 });
 
 // TRENDING
@@ -220,5 +221,27 @@ function GetTrending() {
         success: function(data) {
             $('#trending').html(data);
         }
-    })
+    });
+}
+
+// MESSAGES
+function GetMessages() {
+    $.ajax({
+        url: 'scripts/messages.php',
+        success: function(data) {
+            $('#messages').html(data);
+        }
+    });
+}
+
+function DisplayConversation(UserID1, UserID2) {
+    var data = 'userid1='+UserID1+'&userid2'+UserID2;
+    $.ajax({
+        type: 'POST',
+        url: 'scripts/process-messages.php',
+        data: data,
+        success: function(data) {
+            $('#conversation').html(data).fadeIn(slow);
+        }
+    });
 }

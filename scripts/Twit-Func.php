@@ -49,8 +49,12 @@ function GetMessageUsers($UserID) {
 			$MessageUsername = $FollowingUsers['user_name'];
 			$MessagePicture = $FollowingUsers['user_picture'];
 		?>
-		<a class="mess-box" href="<?= $MessageUserID ?>"><div class="user-message-box">
-			<img class="message-box-picture" src="../uploads/images/<?= $MessagePicture ?>">
+		<script type="text/javascript">
+			var UserID1 = "<? $UserID ?>";
+			var UserID2 = "<? $MessageUserID ?>";
+		</script>
+		<a class="mess-box" onclick="DisplayConversation(UserID1, UserID2)"><div class="user-message-box">
+			<img class="message-box-picture" src="uploads/images/<?= $MessagePicture ?>">
 			<span class="message-box-username"><?= $MessageUsername ?></span>
 		</div></a>
 		<?php

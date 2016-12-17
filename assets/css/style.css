@@ -233,6 +233,7 @@ li a.center-logo {
   border:1px solid #c0c0c0;
   border-radius: 32px;
   margin-right: 5px;
+  float: left;
 }
 .message-box-username {
   font-size: 18px;
@@ -257,6 +258,8 @@ li a.center-logo {
   padding: 8px;
   width: 100%;
   border-radius: 2px;
+  border-bottom: none;
+  color: #333;
 }
 .message:focus {
   outline: none;
@@ -266,24 +269,23 @@ li a.center-logo {
 }
 .msg-box {
   width: 100%;
-  margin-bottom: 3px;
+  margin-bottom: 0px;
 }
 .msg-self {
-  padding: 5px 15px;
+  padding: 0px 10px;
   border-radius: 32px;
-  background-color: #87DA6A;
-  margin-left: 25vw;
-  margin-right: 5px;
-  color: white;
+  background-color: transparent;
+  margin-left: 5px;
+  color: #333;
   width: auto;
 }
 .msg-other {
-  padding: 5px 15px;
+  padding: 0px 10px;
   border-radius: 32px;
-  margin-right: 30vw;
-  margin-left: 3px;
+  margin-left: 5px;
+  color: #333;
   width: auto;
-  background-color: #F1F0F0;
+  background-color: transparent;
 }
 ::-webkit-scrollbar {
     width: 8px;

@@ -4032,6 +4032,15 @@ input[type=range] + .thumb {
   }
 }
 
+@media only screen and (min-width: 1600px) {
+  .nav-wrapper {
+    padding: 0 212px 0 212px;
+  }
+  .container-fluid {
+    margin: 25px 200px 0 200px;
+  }
+}
+
 nav {
   color: #fff;
   background-color: #ee6e73;
@@ -5735,19 +5744,7 @@ input[type=tel],
 input[type=number],
 input[type=search],
 textarea.materialize-textarea {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #9e9e9e;
-  border-radius: 0;
-  outline: none;
-  height: 3rem;
-  width: 100%;
-  font-size: 1rem;
-  margin: 0 0 20px 0;
-  padding: 0;
-  box-shadow: none;
-  box-sizing: content-box;
-  transition: all 0.3s;
+  
 }
 
 input:not([type]):disabled, input:not([type])[readonly="readonly"],
@@ -5821,8 +5818,7 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a;
+  
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -5838,7 +5834,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  
 }
 
 input:not([type]).valid, input:not([type]):focus.valid,
@@ -5866,8 +5862,7 @@ input[type=search].valid,
 input[type=search]:focus.valid,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea:focus.valid {
-  border-bottom: 1px solid #4CAF50;
-  box-shadow: 0 1px 0 0 #4CAF50;
+  
 }
 
 input:not([type]).valid + label:after,
@@ -5926,8 +5921,7 @@ input[type=search].invalid,
 input[type=search]:focus.invalid,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea:focus.invalid {
-  border-bottom: 1px solid #F44336;
-  box-shadow: 0 1px 0 0 #F44336;
+  
 }
 
 input:not([type]).invalid + label:after,
